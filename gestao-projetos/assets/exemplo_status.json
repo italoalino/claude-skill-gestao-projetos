@@ -1,0 +1,39 @@
+{
+  "projeto": "EXEMPLO: Projeto Fictício",
+  "periodo": "00/00 a 00/00/0000",
+  "gp": "Nome do GP",
+  "abordagem": "Híbrido",
+  "status_geral": "amarelo",
+  "status_texto": "Atraso recuperável na frente de integração",
+  "prazo": {"label": "Go-live", "valor": "00/00/0000", "situacao": "Risco de 1 semana de atraso"},
+  "concluido_pct": 60,
+  "concluido_base": "das entregas planejadas",
+  "orcamento_pct": 45,
+  "orcamento_texto": "Dentro do previsto",
+  "entregas": [
+    "Entrega de exemplo concluída e aceita pelo cliente",
+    "Homologação da frente A finalizada",
+    "Backlog da próxima iteração refinado com o dono do produto"
+  ],
+  "proximos_passos": [
+    "Fechar o plano de recuperação da integração",
+    "Reunião de alinhamento com o parceiro externo",
+    "Atualizar o registro de riscos com o novo gatilho"
+  ],
+  "riscos": [
+    {"descricao": "Parceiro externo pode atrasar a entrega da API", "pi": "A / M", "resposta": "Mitigar: ambiente simulado para o time seguir", "dono": "GP"},
+    {"descricao": "Disponibilidade reduzida da equipe de testes no fim do mês", "pi": "M / M", "resposta": "Antecipar o plano de testes", "dono": "Líder QA"}
+  ],
+  "questoes": [
+    "Acesso ao ambiente de homologação ainda pendente"
+  ],
+  "decisoes": [
+    "Aprovar a mudança de escopo SC-01 (impacto de 1 semana)"
+  ],
+  "marcos": [
+    {"marco": "Marco de exemplo 1", "data": "00/00", "status": "concluido", "obs": ""},
+    {"marco": "Marco de exemplo 2", "data": "00/00", "status": "no_prazo", "obs": "Aguardando insumo"},
+    {"marco": "Marco de exemplo 3", "data": "00/00", "status": "em_risco", "obs": "Depende do parceiro"},
+    {"marco": "Marco de exemplo 4", "data": "00/00", "status": "nao_iniciado", "obs": ""}
+  ]
+}

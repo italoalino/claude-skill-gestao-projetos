@@ -1,0 +1,39 @@
+{
+  "project": "EXAMPLE: Fictitious Project",
+  "period": "00/00 to 00/00/0000",
+  "pm": "PM name",
+  "approach": "Hybrid",
+  "overall_status": "amber",
+  "status_note": "Recoverable delay on the integration workstream",
+  "deadline": {"label": "Go-live", "value": "00/00/0000", "status": "Risk of a 1-week delay"},
+  "percent_complete": 60,
+  "complete_basis": "of planned deliverables",
+  "budget_pct": 45,
+  "budget_note": "Within plan",
+  "deliverables": [
+    "Example deliverable completed and accepted by the customer",
+    "Workstream A testing signed off",
+    "Next iteration backlog refined with the product owner"
+  ],
+  "next_steps": [
+    "Close the integration recovery plan",
+    "Alignment meeting with the external partner",
+    "Update the risk register with the new trigger"
+  ],
+  "risks": [
+    {"description": "External partner may deliver the API late", "pi": "H / M", "response": "Mitigate: mock environment so the team keeps moving", "owner": "PM"},
+    {"description": "Reduced test team availability at month end", "pi": "M / M", "response": "Bring the test plan forward", "owner": "QA lead"}
+  ],
+  "issues": [
+    "Access to the staging environment still pending"
+  ],
+  "decisions": [
+    "Approve scope change CR-01 (1-week impact)"
+  ],
+  "milestones": [
+    {"milestone": "Example milestone 1", "date": "00/00", "status": "completed", "notes": ""},
+    {"milestone": "Example milestone 2", "date": "00/00", "status": "on_track", "notes": "Waiting for input"},
+    {"milestone": "Example milestone 3", "date": "00/00", "status": "at_risk", "notes": "Depends on the partner"},
+    {"milestone": "Example milestone 4", "date": "00/00", "status": "not_started", "notes": ""}
+  ]
+}
