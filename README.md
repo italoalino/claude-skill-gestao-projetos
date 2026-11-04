@@ -36,7 +36,7 @@ scripts/build_status.py gera o status em PowerPoint
 
 ## Como instalar
 
-**No Claude (app e web):** compacte a pasta da skill (`gestao-projetos` ou `project-management`) num arquivo .zip, mantendo o nome da pasta. Depois, em **Customize > Skills**, clique em "+", escolha "Create skill" e "Upload a skill", e envie o .zip. É preciso ter execução de código habilitada. Detalhes e requisitos de plano no [artigo de ajuda do Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+**No Claude (app e web):** baixe o .zip pronto na [página de Releases](https://github.com/italoalino/claude-skill-gestao-projetos/releases/latest) (`gestao-projetos.zip` em português ou `project-management.zip` em inglês). Depois, em **Customize > Skills**, clique em "+", escolha "Create skill" e "Upload a skill", e envie o .zip. É preciso ter execução de código habilitada. Detalhes e requisitos de plano no [artigo de ajuda do Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 
 **No Claude Code:** copie a pasta da skill para `~/.claude/skills/` (uso pessoal) ou para `.claude/skills/` dentro do projeto. Mais em [Agent Skills](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview).
 
@@ -113,8 +113,7 @@ scripts/build_status.py builds the PowerPoint status
 
 ## Installing
 
-**In Claude (app and web):** zip the skill folder (`project-management` or `gestao-projetos`), keeping the folder name. Then, in **Customize > Skills**, click "+", choose "Create skill" and "Upload a skill", and upload the .zip. Code execution must be enabled. Details and plan requirements in the [Claude help article](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
-
+**In Claude (app and web):** download the ready-made .zip from the [Releases page](https://github.com/italoalino/claude-skill-gestao-projetos/releases/latest) (`project-management.zip` in English or `gestao-projetos.zip` in Portuguese). Then, in **Customize > Skills**, click "+", choose "Create skill" and "Upload a skill", and upload the .zip. Code execution must be enabled. Details and plan requirements in the [Claude help article](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 **In Claude Code:** copy the skill folder to `~/.claude/skills/` (personal use) or to `.claude/skills/` inside a project. More in [Agent Skills](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview).
 
 The PowerPoint status uses the `python-pptx` library. It is usually already available in Claude; if not, `pip install python-pptx`.
