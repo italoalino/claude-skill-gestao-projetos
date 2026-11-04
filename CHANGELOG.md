@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+- O script `build_status.py` agora avisa quando a capa, o rodapé ou o encerramento ainda têm o texto de exemplo do template neutro / `build_status.py` now warns when the cover, footer or closing still have the neutral template's sample text.
+- Novo exemplo no `SKILL.md` para o pedido misto "revise e monte o status" / New `SKILL.md` example for the mixed request "review and build the status".
+- `references/status-report.md` orienta a avisar o usuário quando o rodapé de exemplo for detectado / `status-report.md` tells the skill to flag the sample footer to the user.
+
 ## 1.0.0
 
 Primeira versão pública / First public release.

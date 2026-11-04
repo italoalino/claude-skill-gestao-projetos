@@ -20,7 +20,7 @@ The status uses the neutral template `assets/template.pptx`: a cover, two model 
    python3 scripts/build_status.py --data status.json --out status_<project>_<date>.pptx
    ```
    Dependency: `python-pptx` (`pip install python-pptx` if missing). The script defaults to English labels; `--lang pt` switches them to Portuguese.
-4. Read the script's warnings. It trims lists that exceed the limit and says so; prioritize the content rather than blindly accepting the cut.
+4. Read the script's warnings. It trims lists that exceed the limit and says so; prioritize the content rather than blindly accepting the cut. If the sample-text warning appears (organization name, footer or closing contact still from the template), tell the user when delivering and ask for the details to replace them; do not let the status go out with the sample footer and do not invent names.
 5. Check the result visually (convert to PDF and look at the slides) before delivering.
 6. Deliver the file and say in one sentence what the status highlights (for example, the main point of attention).
 

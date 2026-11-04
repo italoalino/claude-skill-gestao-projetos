@@ -20,7 +20,7 @@ O status usa o template neutro `assets/template.pptx`: capa, dois slides de cont
    python3 scripts/build_status.py --data status.json --out status_<projeto>_<data>.pptx
    ```
    Dependência: `python-pptx` (`pip install python-pptx --break-system-packages` se faltar). Os rótulos dos slides saem em português; `--lang en` troca para inglês.
-4. Leia os avisos do script. Ele corta listas que passam do limite e avisa; priorize o conteúdo em vez de aceitar o corte às cegas.
+4. Leia os avisos do script. Ele corta listas que passam do limite e avisa; priorize o conteúdo em vez de aceitar o corte às cegas. Se aparecer o aviso de texto de exemplo no template (nome da organização, rodapé ou contato do encerramento), diga isso ao usuário na entrega e peça os dados para trocar; não deixe o status sair com o rodapé de exemplo e não invente nomes.
 5. Confira o resultado visualmente (converta para PDF e olhe os slides) antes de entregar.
 6. Entregue o arquivo e diga em uma frase o que o status destaca (por exemplo, o ponto de atenção principal).
 

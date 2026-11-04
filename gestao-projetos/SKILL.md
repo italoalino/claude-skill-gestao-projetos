@@ -125,6 +125,17 @@ Os exemplos mostram o formato e o tom esperados. Os dados são fictícios: nunca
 **Próximos 7 dias.** Registrar as três mudanças com impacto (GP, 2 dias); atualizar o registro de riscos com o líder técnico (GP, até sexta).
 **Perguntas ao GP.** Quem aprovou cada mudança e com qual alçada? Existe previsão de término atualizada?
 
+### Exemplo 4: pedido misto (revisão e depois status)
+
+**Entrada:** "Revisa o projeto Migração de Pedidos e já monta o status da semana em PowerPoint. 70% do escopo, prazo e custo verdes, risco desatualizado, três mudanças aprovadas por e-mail. Go-live em 6 semanas. Eu sou a GP."
+
+**Saída esperada:**
+
+1. **Revisão primeiro**, porque ela define o conteúdo do status: o mesmo scorecard do Exemplo 3, resumido em 3 achados (controle de mudanças fora do processo, prazo e custo verdes sem medição visível, registro de riscos desatualizado).
+2. **Status em seguida, sem copiar o verde do relato.** Status geral **amarelo**, e o texto diz por quê: "verde informado, sem evidência de medição". Os 70% entram com a base marcada como **a confirmar**, porque o número sem base engana. Em decisões entra "aprovar o impacto das três mudanças aprovadas por e-mail". Entregas, marcos e orçamento não informados aparecem como **n/d**.
+3. **Arquivo gerado com o script**, conferido visualmente, e uma frase de entrega: "O status destaca que o verde de prazo e custo ainda não tem medição por trás."
+4. **Ao final**, até 3 perguntas só da GP: quem aprovou cada mudança e com qual alçada; qual é a base dos 70%; se há template oficial do PMO. Se o script avisar que o rodapé ainda tem texto de exemplo, isso entra na entrega.
+
 ## Limites
 
 - A skill não substitui políticas, alçadas e fluxos do PMO e da governança da organização; quando houver conflito, vale a regra interna e o GP deve ser avisado do ponto de atenção.

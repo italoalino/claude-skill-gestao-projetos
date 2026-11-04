@@ -117,6 +117,13 @@ RISK_MAX_CHARS = {"descricao": 120, "resposta": 84}
 # cerca de 100 caracteres.
 SUBTITLE_CHARS = 100
 
+# Trechos dos textos de exemplo do template neutro (PT e EN). Se ainda estiverem no arquivo
+# gerado, o script avisa. Um template da sua empresa, com outros textos, não dispara o aviso.
+SAMPLE_MARKERS = (
+    "nome da organização", "programa ou área", "nome do gp", "e-mail ou canal do projeto",
+    "organization name", "program or area", "pm name", "e-mail or project channel",
+)
+
 WARNINGS = []
 
 
@@ -315,6 +322,23 @@ def fmt_pct(v):
     return f"{n:g}%"
 
 
+def check_sample_text(slides):
+    """Avisa se capa, rodapé ou encerramento ainda têm o texto de exemplo do template."""
+    found = []
+    for sl in slides:
+        for sh in sl.shapes:
+            if not sh.has_text_frame:
+                continue
+            txt = sh.text_frame.text
+            if any(m in txt.lower() for m in SAMPLE_MARKERS):
+                found.append(f"'{txt.strip()[:50]}'")
+    if found:
+        warn("o template ainda tem texto de exemplo (rodapé, capa ou encerramento): "
+             + "; ".join(dict.fromkeys(found)) + ". Troque pelo nome da organização e pelo contato do GP "
+             "antes de enviar / the template still has sample text (footer, cover or closing): "
+             + "; ".join(dict.fromkeys(found)) + ". Replace it with your organization and PM contact before sending.")
+
+
 def find_shape(slide, name):
     for sh in slide.shapes:
         if sh.name == name:
@@ -334,6 +358,8 @@ def build(data, template, out):
     if title_shape is None or find_shape(blank_a, "Slide number") is None:
         sys.exit("O template precisa das formas 'Cover title' (capa) e 'Slide number' (slide 2). / "
                  "Template needs shapes named 'Cover title' (cover) and 'Slide number' (slide 2).")
+
+    check_sample_text([cover, blank_a, closing])
 
     # Tudo o que está no slide de conteúdo modelo (rodapé, barras, logo) é copiado para cada slide novo.
     base_elements = [sh._element for sh in blank_a.shapes if not sh.is_placeholder]

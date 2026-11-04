@@ -125,6 +125,17 @@ The examples show the expected format and tone. The data is fictitious: never re
 **Next 7 days.** Record the three changes with their impact (PM, 2 days); update the risk register with the tech lead (PM, by Friday).
 **Questions for the PM.** Who approved each change and under what authority? Is there an up-to-date estimate at completion?
 
+### Example 4: mixed request (review, then status)
+
+**Input:** "Review the Order Migration project and build this week's PowerPoint status. 70% of scope, schedule and cost green, risk register outdated, three changes approved by email. Go-live in 6 weeks. I am the PM."
+
+**Expected output:**
+
+1. **Review first**, because it sets the status content: the same scorecard as Example 3, summarized in 3 findings (change control bypassed, green schedule and cost with no visible measurement, outdated risk register).
+2. **Status next, without copying the reported green.** Overall status **amber**, and the text says why: "green reported, no evidence of measurement". The 70% goes in with its basis marked **to be confirmed**, because a number without a basis misleads. Under decisions: "approve the impact of the three changes approved by email". Deliverables, milestones and budget not provided show as **n/a**.
+3. **File built with the script**, checked visually, and a one-sentence handoff: "The status highlights that the green on schedule and cost has no measurement behind it yet."
+4. **At the end**, up to 3 questions only the PM can answer: who approved each change and under what authority; what the 70% is based on; whether an official PMO template exists. If the script warns that the footer still has sample text, that goes in the handoff.
+
 ## Limits
 
 - This skill does not replace the organization's PMO policies, authority levels and governance flows; when they conflict, the internal rule wins and the PM should be told about the point of attention.
