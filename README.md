@@ -19,9 +19,10 @@ Escrevi esta skill para o meu próprio trabalho como GP e decidi abrir para quem
 ## O que tem no repositório
 
 ```
-gestao-projetos/        versão em português
-project-management/     versão em inglês
-evals/                  cenários de teste
+skills/gestao-projetos/     versão em português
+skills/project-management/  versão em inglês
+evals/                      cenários de teste
+.claude-plugin/plugin.json  manifesto do plugin
 ```
 
 Cada pasta é uma skill completa:
@@ -38,9 +39,13 @@ scripts/build_status.py gera o status em PowerPoint
 
 **No Claude (app e web):** baixe o .zip pronto na [página de Releases](https://github.com/italoalino/claude-skill-gestao-projetos/releases/latest) (`gestao-projetos.zip` em português ou `project-management.zip` em inglês). Depois, em **Customize > Skills**, clique em "+", escolha "Create skill" e "Upload a skill", e envie o .zip. É preciso ter execução de código habilitada. Detalhes e requisitos de plano no [artigo de ajuda do Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 
-**No Claude Code:** copie a pasta da skill para `~/.claude/skills/` (uso pessoal) ou para `.claude/skills/` dentro do projeto. Mais em [Agent Skills](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview).
+**No Claude Code:** copie a pasta `skills/gestao-projetos` (ou `skills/project-management`) para `~/.claude/skills/` (uso pessoal) ou para `.claude/skills/` dentro do projeto. Mais em [Agent Skills](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview).
 
 O status em PowerPoint usa a biblioteca `python-pptx`. No Claude ela normalmente já está disponível; se não estiver, `pip install python-pptx`.
+
+## O que a skill executa e envia
+
+A skill é composta por instruções em texto (`SKILL.md` e arquivos em `references/`) e por um único script opcional, `scripts/build_status.py`, que roda localmente com Python para gerar o status em PowerPoint a partir de um arquivo JSON e do `assets/template.pptx`. O script usa apenas a biblioteca padrão e a `python-pptx`, não faz chamadas de rede e não envia dados para lugar nenhum. A skill não guarda nada: o que você informa fica só na conversa com o Claude.
 
 ## Como adaptar à sua empresa
 
@@ -96,9 +101,10 @@ I wrote it for my own work as a PM and decided to open it up for anyone to use a
 ## What is in the repository
 
 ```
-gestao-projetos/        Portuguese version
-project-management/     English version
-evals/                  test scenarios
+skills/gestao-projetos/     Portuguese version
+skills/project-management/  English version
+evals/                      test scenarios
+.claude-plugin/plugin.json  plugin manifest
 ```
 
 Each folder is a complete skill:
@@ -114,9 +120,13 @@ scripts/build_status.py builds the PowerPoint status
 ## Installing
 
 **In Claude (app and web):** download the ready-made .zip from the [Releases page](https://github.com/italoalino/claude-skill-gestao-projetos/releases/latest) (`project-management.zip` in English or `gestao-projetos.zip` in Portuguese). Then, in **Customize > Skills**, click "+", choose "Create skill" and "Upload a skill", and upload the .zip. Code execution must be enabled. Details and plan requirements in the [Claude help article](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
-**In Claude Code:** copy the skill folder to `~/.claude/skills/` (personal use) or to `.claude/skills/` inside a project. More in [Agent Skills](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview).
+**In Claude Code:** copy the `skills/project-management` folder (or `skills/gestao-projetos`) to `~/.claude/skills/` (personal use) or to `.claude/skills/` inside a project. More in [Agent Skills](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview).
 
 The PowerPoint status uses the `python-pptx` library. It is usually already available in Claude; if not, `pip install python-pptx`.
+
+## What the skill runs and sends
+
+The skill is made of plain-text instructions (`SKILL.md` and the files in `references/`) plus one optional script, `scripts/build_status.py`, which runs locally with Python to build the PowerPoint status from a JSON file and `assets/template.pptx`. The script uses only the standard library and `python-pptx`, makes no network calls and sends no data anywhere. The skill stores nothing: what you provide stays in your conversation with Claude.
 
 ## Adapting it to your company
 
