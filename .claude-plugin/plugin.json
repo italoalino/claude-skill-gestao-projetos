@@ -1,0 +1,14 @@
+{
+  "name": "gestao-projetos",
+  "displayName": "Gestão de Projetos (PMBOK 8 + ágil)",
+  "version": "1.1.0",
+  "description": "Copiloto de gestão de projetos para o Claude: diagnóstico de situações, artefatos (TAP, riscos, mudanças, atas), status report em PowerPoint e revisão de saúde do projeto. Project management copilot with Portuguese and English skills.",
+  "author": {
+    "name": "Italo Alves Lino",
+    "url": "https://github.com/italoalino"
+  },
+  "homepage": "https://github.com/italoalino/claude-skill-gestao-projetos",
+  "repository": "https://github.com/italoalino/claude-skill-gestao-projetos",
+  "license": "MIT",
+  "keywords": ["project-management", "pmbok", "agile", "pmo", "gestao-de-projetos"]
+}

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.0
+
+- Repositório reorganizado como plugin: skills em `skills/` e manifesto em `.claude-plugin/plugin.json` / Repository restructured as a plugin: skills under `skills/` and manifest at `.claude-plugin/plugin.json`.
+- README descreve o que a skill executa e envia / README now states what the skill runs and sends.
+
 ## 1.0.1
 
 - O script `build_status.py` agora avisa quando a capa, o rodapé ou o encerramento ainda têm o texto de exemplo do template neutro / `build_status.py` now warns when the cover, footer or closing still have the neutral template's sample text.
